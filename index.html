@@ -179,10 +179,66 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);min-hei
 .login-user-pill{font-size:11px;color:var(--text2);background:#222;border-radius:20px;padding:5px 11px;cursor:pointer;border:1px solid #2a2a2a;white-space:nowrap}
 .spinner{display:inline-block;width:14px;height:14px;border:2px solid #0d0d0d;border-top-color:transparent;border-radius:50%;animation:spin 0.7s linear infinite;vertical-align:middle;margin-left:6px}
 @keyframes spin{to{transform:rotate(360deg)}}
+/* PROFILE SETUP */
+.profile-step-header{text-align:center;margin-bottom:18px}
+.profile-emoji{font-size:38px;margin-bottom:6px}
+.profile-step-title{font-family:var(--font-head);font-size:17px;font-weight:800;margin-bottom:3px}
+.profile-step-sub{font-size:11px;color:var(--text2)}
+.gender-row{display:flex;gap:8px;margin-bottom:4px}
+.gender-btn{flex:1;background:#222;border:1.5px solid #2a2a2a;color:var(--text2);border-radius:10px;padding:10px;font-family:var(--font-head);font-size:13px;font-weight:700;cursor:pointer;transition:all 0.2s}
+.gender-btn.selected{background:rgba(200,241,53,0.12);border-color:var(--accent);color:var(--accent)}
+.prof-select{width:100%;background:#222;border:1.5px solid #2a2a2a;color:var(--text);border-radius:10px;padding:11px 12px;font-family:var(--font-body);font-size:14px;outline:none;-webkit-appearance:none;margin-bottom:4px}
+.prof-select:focus{border-color:var(--accent)}
+/* BMI CARD */
+.bmi-card{margin:0 14px 10px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;display:none}
+.bmi-card.show{display:block}
+.bmi-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.bmi-value-wrap{display:flex;align-items:baseline;gap:4px}
+.bmi-num{font-family:var(--font-head);font-size:30px;font-weight:800}
+.bmi-unit{font-size:11px;color:var(--text2)}
+.bmi-badge{font-size:11px;font-weight:700;border-radius:20px;padding:4px 12px}
+.bmi-underweight{background:rgba(90,180,255,0.15);color:#5ab4ff}
+.bmi-normal{background:rgba(53,241,160,0.15);color:var(--accent2)}
+.bmi-overweight{background:rgba(255,180,50,0.15);color:#ffb432}
+.bmi-obese{background:rgba(255,94,94,0.15);color:var(--red)}
+.bmi-bar-wrap{position:relative;height:6px;border-radius:3px;background:linear-gradient(90deg,#5ab4ff 0%,#35f1a0 30%,#ffb432 60%,#ff5e5e 100%);margin-top:6px}
+.bmi-bar-indicator{position:absolute;top:-3px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid #0d0d0d;transform:translateX(-50%);transition:left 0.6s ease}
+.bmi-scale-labels{display:flex;justify-content:space-between;margin-top:5px;font-size:9px;color:var(--text2)}
+/* CALORIE STATUS */
+.cal-status-wrap{text-align:center;margin-top:8px}
+.cal-status{font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;display:inline-block}
+.cal-status.under{background:rgba(53,241,160,0.12);color:var(--accent2)}
+.cal-status.over{background:rgba(255,94,94,0.12);color:var(--red)}
+.cal-status.exact{background:rgba(200,241,53,0.12);color:var(--accent)}
+.cal-target-edit{display:flex;align-items:center;gap:6px;margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
+.cal-target-label{font-size:11px;color:var(--text2);flex:1}
+.cal-target-inp{width:72px;background:var(--surface2);border:1px solid var(--border);color:var(--text);font-family:var(--font-head);font-size:13px;font-weight:700;border-radius:8px;padding:5px 8px;outline:none;text-align:center}
+.cal-target-inp:focus{border-color:var(--accent)}
+.cal-target-set{background:var(--accent);color:#0d0d0d;border:none;border-radius:8px;font-family:var(--font-head);font-size:11px;font-weight:700;padding:5px 10px;cursor:pointer}
+/* PROFILE TAB */
+.profile-hero{margin:0 14px 12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;text-align:center}
+.profile-avatar{width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 10px}
+.profile-email-lbl{font-size:12px;color:var(--text2);margin-bottom:10px}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 14px 12px}
+.stat-tile{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px;text-align:center}
+.stat-tile-val{font-family:var(--font-head);font-size:22px;font-weight:800;color:var(--accent);line-height:1}
+.stat-tile-lbl{font-size:10px;color:var(--text2);margin-top:3px;text-transform:uppercase;letter-spacing:0.5px}
+.cal-goal-card{margin:0 14px 12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px}
+.cal-goal-title{font-family:var(--font-head);font-size:13px;font-weight:700;margin-bottom:10px}
+.cal-goal-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.cal-goal-desc{font-size:11px;color:var(--text2);flex:1}
+.cal-goal-val{font-family:var(--font-head);font-size:15px;font-weight:800;color:var(--accent)}
+.cal-override-row{display:flex;gap:8px;margin-top:10px}
+.cal-override-inp{flex:1;background:var(--surface2);border:1px solid var(--border);color:var(--text);font-family:var(--font-head);font-size:15px;font-weight:700;border-radius:10px;padding:9px 12px;outline:none;text-align:center}
+.cal-override-inp:focus{border-color:var(--accent)}
+.cal-override-btn{background:var(--accent);color:#0d0d0d;border:none;border-radius:10px;font-family:var(--font-head);font-size:12px;font-weight:700;padding:9px 14px;cursor:pointer}
+.reset-profile-btn{margin:0 14px 20px;width:calc(100% - 28px);background:none;border:1px solid var(--red);color:var(--red);border-radius:10px;font-family:var(--font-head);font-size:12px;font-weight:700;padding:11px;cursor:pointer}
+.no-profile-prompt{margin:0 14px 12px;background:var(--surface);border:1px dashed var(--border);border-radius:var(--radius);padding:20px;text-align:center}
+.no-profile-title{font-family:var(--font-head);font-size:14px;font-weight:700;margin-bottom:6px}
+.no-profile-sub{font-size:12px;color:var(--text2);margin-bottom:14px}
+.setup-profile-btn{background:var(--accent);color:#0d0d0d;border:none;border-radius:10px;font-family:var(--font-head);font-size:13px;font-weight:700;padding:11px 22px;cursor:pointer}
 </style>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -191,21 +247,24 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);min-hei
   <div class="login-card">
     <div class="login-logo">Fuel<span>Track</span></div>
     <div class="login-sub">Your personal diet companion 🥗</div>
-    <div class="login-step active" id="step-phone">
-      <div class="login-label">Mobile number</div>
-      <div class="phone-row">
-        <input class="cc-input" id="cc-input" value="+91" maxlength="4">
-        <input class="phone-input" id="phone-input" type="tel" placeholder="98XXXXXXXX" maxlength="10" onkeydown="if(event.key==='Enter')sendOTP()">
-      </div>
-      <div id="recaptcha-container"></div>
-      <button class="login-btn" id="send-otp-btn" onclick="sendOTP()">Send OTP via SMS</button>
-      <div class="login-err" id="phone-err"></div>
+
+    <!-- STEP 1: Email only -->
+    <div class="login-step active" id="step-email">
+      <div class="login-label">Email Address</div>
+      <input class="phone-input" id="email-input" type="email" placeholder="you@example.com"
+        style="width:100%;margin-bottom:14px"
+        onkeydown="if(event.key==='Enter')sendEmailOTP()">
+      <button class="login-btn" id="send-otp-btn" onclick="sendEmailOTP()">📧 Send OTP to Email</button>
+      <div class="login-err" id="email-err"></div>
       <div style="margin-top:16px;padding-top:14px;border-top:1px solid #2a2a2a">
-        <span onclick="hideLoginOverlay()" style="font-size:12px;color:var(--text2);cursor:pointer;text-decoration:underline;text-underline-offset:3px">Use without account (local only)</span>
+        <span onclick="guestLogin()" style="font-size:12px;color:var(--text2);cursor:pointer;text-decoration:underline;text-underline-offset:3px">Use without account (local only)</span>
       </div>
     </div>
+
+    <!-- STEP 2: OTP -->
     <div class="login-step" id="step-otp">
-      <div class="login-label" style="text-align:center;margin-bottom:14px">OTP sent to <span id="otp-phone-display" style="color:var(--accent)"></span></div>
+      <div class="login-label" style="text-align:center;margin-bottom:6px">OTP sent to</div>
+      <div style="text-align:center;font-family:var(--font-head);font-size:13px;color:var(--accent);margin-bottom:16px" id="otp-email-display"></div>
       <div class="otp-row">
         <input class="otp-box" maxlength="1" type="tel" oninput="otpInput(this,0)" onkeydown="otpKey(event,0)">
         <input class="otp-box" maxlength="1" type="tel" oninput="otpInput(this,1)" onkeydown="otpKey(event,1)">
@@ -214,9 +273,48 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);min-hei
         <input class="otp-box" maxlength="1" type="tel" oninput="otpInput(this,4)" onkeydown="otpKey(event,4)">
         <input class="otp-box" maxlength="1" type="tel" oninput="otpInput(this,5)" onkeydown="otpKey(event,5)">
       </div>
-      <button class="login-btn" id="verify-btn" onclick="verifyOTP()">✓ Verify & Enter</button>
-      <button class="login-btn secondary" onclick="goBackPhone()">← Change Number</button>
+      <button class="login-btn" id="verify-btn" onclick="verifyEmailOTP()">✓ Verify & Enter</button>
+      <button class="login-btn secondary" onclick="goBackEmail()">← Change Email</button>
       <div class="login-err" id="otp-err"></div>
+      <div style="margin-top:10px;font-size:11px;color:var(--text2)">Didn't get it? <span onclick="resendOTP()" style="color:var(--accent);cursor:pointer;text-decoration:underline" id="resend-link">Resend OTP</span></div>
+    </div>
+
+    <!-- STEP 3: Profile Setup -->
+    <div class="login-step" id="step-profile">
+      <div class="profile-step-header">
+        <div class="profile-emoji">🏋️</div>
+        <div class="profile-step-title">Personalise your plan</div>
+        <div class="profile-step-sub">Takes 30 sec · saved locally</div>
+      </div>
+      <div class="login-label">Age</div>
+      <input class="phone-input" id="prof-age" type="number" placeholder="e.g. 25" min="10" max="100" style="width:100%;margin-bottom:12px">
+      <div class="login-label">Gender</div>
+      <div class="gender-row" style="margin-bottom:12px">
+        <button class="gender-btn selected" id="gen-male" onclick="selectGender('male')">♂ Male</button>
+        <button class="gender-btn" id="gen-female" onclick="selectGender('female')">♀ Female</button>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">
+        <div>
+          <div class="login-label">Height (cm)</div>
+          <input class="phone-input" id="prof-height" type="number" placeholder="170" min="100" max="250" style="width:100%">
+        </div>
+        <div>
+          <div class="login-label">Weight (kg)</div>
+          <input class="phone-input" id="prof-weight" type="number" placeholder="76" min="30" max="300" style="width:100%">
+        </div>
+      </div>
+      <div class="login-label">Target Weight (kg)</div>
+      <input class="phone-input" id="prof-target" type="number" placeholder="e.g. 60" min="30" max="300" style="width:100%;margin-bottom:12px">
+      <div class="login-label">Activity Level</div>
+      <select class="prof-select" id="prof-activity" style="margin-bottom:16px">
+        <option value="1.2">🪑 Sedentary (desk job, no exercise)</option>
+        <option value="1.375">🚶 Light (1–3x / week)</option>
+        <option value="1.55" selected>🏃 Moderate (3–5x / week)</option>
+        <option value="1.725">💪 Active (6–7x / week)</option>
+        <option value="1.9">🔥 Very Active (athlete)</option>
+      </select>
+      <button class="login-btn" onclick="saveProfile()">🎯 Set My Goals</button>
+      <div class="login-err" id="prof-err"></div>
     </div>
   </div>
 </div>
@@ -294,7 +392,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);min-hei
         </svg>
         <div class="ring-center">
           <div class="ring-cal" id="cal-consumed">0</div>
-          <div class="ring-label">/ 1500 kcal</div>
+          <div class="ring-label" id="cal-target-display">/ 1500 kcal</div>
         </div>
       </div>
       <div class="summary-stats">
@@ -311,6 +409,25 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);min-hei
           <div class="stat-bar-wrap"><div class="stat-bar bar-f" id="fib-bar" style="width:0%"></div></div>
         </div>
       </div>
+    </div>
+    <div class="cal-status-wrap" id="cal-status-wrap">
+       <div class="cal-status exact" id="cal-status-badge">Target: 1500 kcal</div>
+    </div>
+  </div>
+
+  <div class="bmi-card" id="bmi-card">
+    <div class="bmi-top">
+      <div class="bmi-value-wrap">
+        <div class="bmi-num" id="bmi-num">--</div>
+        <div class="bmi-unit">BMI</div>
+      </div>
+      <div class="bmi-badge bmi-normal" id="bmi-badge">Normal</div>
+    </div>
+    <div class="bmi-bar-wrap">
+      <div class="bmi-bar-indicator" id="bmi-indicator" style="left:50%"></div>
+    </div>
+    <div class="bmi-scale-labels">
+      <span>Under</span><span>Normal</span><span>Over</span><span>Obese</span>
     </div>
   </div>
 
@@ -394,6 +511,67 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);min-hei
   </div>
 </div>
 
+<!-- PROFILE TAB -->
+<div class="tab-content" id="tab-profile">
+  <div class="progress-header">
+    <div class="progress-title">My Profile</div>
+    <div class="progress-sub" id="prof-email-sub">Update your body stats</div>
+  </div>
+
+  <div id="prof-has-data" style="display:none">
+    <div class="profile-hero">
+      <div class="profile-avatar" id="prof-avatar">👤</div>
+      <div class="profile-email-lbl" id="prof-email-lbl">guest</div>
+      <div style="font-family:var(--font-head);font-size:16px;font-weight:700">TDEE: <span id="prof-tdee" style="color:var(--accent)">2200</span> kcal</div>
+      <div style="font-size:11px;color:var(--text2)">Total Daily Energy Expenditure</div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-tile">
+        <div class="stat-tile-val" id="pt-age">--</div>
+        <div class="stat-tile-lbl">Age</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-tile-val" id="pt-height">--</div>
+        <div class="stat-tile-lbl">Height (cm)</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-tile-val" id="pt-weight">--</div>
+        <div class="stat-tile-lbl">Weight (kg)</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-tile-val" id="pt-target">--</div>
+        <div class="stat-tile-lbl">Target (kg)</div>
+      </div>
+    </div>
+
+    <div class="cal-goal-card">
+      <div class="cal-goal-title">My Calorie Target</div>
+      <div class="cal-goal-row">
+        <div class="cal-goal-desc" id="prof-goal-desc">To reach your goal, your daily suggested target is:</div>
+        <div class="cal-goal-val"><span id="prof-goal-cal">--</span> kcal</div>
+      </div>
+      <div class="cal-override-row">
+        <input type="number" class="cal-override-inp" id="custom-cal-inp" placeholder="Custom kcal">
+        <button class="cal-override-btn" onclick="saveCustomCalTarget()">Set Target</button>
+      </div>
+      <div style="font-size:10px;color:var(--text2);margin-top:6px;text-align:center">Set to 0 to use auto-suggested target.</div>
+    </div>
+
+    <button class="reset-profile-btn" onclick="resetProfile()">Reset Profile Data</button>
+    <button class="reset-profile-btn" style="border-color:var(--border);color:var(--text2);margin-top:-10px" onclick="logOutUser()">Sign Out</button>
+  </div>
+
+  <div id="prof-no-data">
+    <div class="no-profile-prompt">
+      <div class="profile-emoji" style="font-size:42px;margin-bottom:12px">🤔</div>
+      <div class="no-profile-title">No Profile Found</div>
+      <div class="no-profile-sub">Set up your profile to unlock a personalized calorie target, BMI tracking, and TDEE calculation.</div>
+      <button class="setup-profile-btn" onclick="showLoginOverlay(); switchTab('home'); document.getElementById('step-email').classList.add('active');">Go to Setup</button>
+    </div>
+  </div>
+</div>
+
 <div class="bottom-nav">
   <div class="nav-item active" id="nav-home" onclick="switchTab('home')">
     <div class="nav-icon">🥗</div><div>Meals</div>
@@ -401,133 +579,297 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);min-hei
   <div class="nav-item" id="nav-weight" onclick="switchTab('weight')">
     <div class="nav-icon">📊</div><div>Progress</div>
   </div>
+  <div class="nav-item" id="nav-profile" onclick="switchTab('profile')">
+    <div class="nav-icon">👤</div><div>Profile</div>
+  </div>
 </div>
 
 <script>
-// ====== FIREBASE CONFIG ======
-// STEP: Go to console.firebase.google.com → Your Project → Project Settings → Your Apps
-// Copy the firebaseConfig object and paste the values below:
-const FB_CONFIG={
-  apiKey:"PASTE_API_KEY",
-  authDomain:"PASTE_AUTH_DOMAIN",
-  projectId:"PASTE_PROJECT_ID",
-  storageBucket:"PASTE_STORAGE_BUCKET",
-  messagingSenderId:"PASTE_SENDER_ID",
-  appId:"PASTE_APP_ID"
-};
-let auth,db,currentUID=null,confirmResult=null;
-const FB_READY=(FB_CONFIG.apiKey!=="PASTE_API_KEY");
-if(FB_READY){
-  firebase.initializeApp(FB_CONFIG);
-  auth=firebase.auth();
-  db=firebase.firestore();
-  auth.onAuthStateChanged(user=>{
-    if(user){currentUID=user.uid;hideLoginOverlay();addLogoutBtn(user.phoneNumber);loadCloudData();}
-    else{currentUID=null;showLoginOverlay();}
-  });
-} else {
-  console.warn('Firebase not configured — running in local mode.');
+// ====== EMAIL OTP CONFIG (EmailJS — Free Tier) ======
+// SETUP STEPS:
+// 1. Go to https://www.emailjs.com/ → Sign up free
+// 2. Add an Email Service (Gmail / Outlook etc.) → copy Service ID
+// 3. Create an Email Template with variables: {{otp_code}}, {{to_name}}, {{to_email}}
+// 4. Go to Account → Public Key and copy it
+// Paste all three values below:
+const EJS_SERVICE_ID  = 'service_xb2lmdw';
+const EJS_TEMPLATE_ID = 'template_xug0oan';
+const EJS_PUBLIC_KEY  = 'zg1MR09BoxkY3V7G7';
+
+const EJS_READY = (EJS_PUBLIC_KEY !== 'PASTE_PUBLIC_KEY');
+if(EJS_READY){ emailjs.init(EJS_PUBLIC_KEY); }
+else{ console.warn('EmailJS not configured — OTP will be shown in console for testing.'); }
+
+let _otpCode = null, _otpEmail = null, _otpExpiry = null, _loggedEmail = null;
+
+function showLoginOverlay(){
+  const saved = localStorage.getItem('ft_email');
+  if(saved){
+    document.getElementById('email-input').value = saved;
+  }
+  document.getElementById('login-overlay').classList.remove('hidden');
 }
-function showLoginOverlay(){document.getElementById('login-overlay').classList.remove('hidden')}
-function hideLoginOverlay(){document.getElementById('login-overlay').classList.add('hidden')}
-function addLogoutBtn(phone){
-  if(document.getElementById('logout-pill'))return;
-  const tb=document.querySelector('.topbar');
-  const pill=document.createElement('div');
-  pill.id='logout-pill';pill.className='login-user-pill';
-  pill.textContent=(phone||'Me')+' · Out';
-  pill.onclick=()=>{if(confirm('Log out?'))auth.signOut();};
-  tb.insertBefore(pill,tb.querySelector('.live-time'));
+function hideLoginOverlay(){
+  document.getElementById('login-overlay').classList.add('hidden');
 }
-let recapVerifier;
-function sendOTP(){
-  const cc=document.getElementById('cc-input').value.trim();
-  const ph=document.getElementById('phone-input').value.trim();
-  const full=cc+ph;
-  const btn=document.getElementById('send-otp-btn');
-  const err=document.getElementById('phone-err');
-  if(ph.length<10){err.textContent='Enter a valid 10-digit number';return;}
-  err.textContent='';btn.disabled=true;btn.innerHTML='Sending<span class="spinner"></span>';
-  if(!recapVerifier)recapVerifier=new firebase.auth.RecaptchaVerifier('recaptcha-container',{size:'invisible'});
-  auth.signInWithPhoneNumber(full,recapVerifier)
-    .then(res=>{confirmResult=res;document.getElementById('otp-phone-display').textContent=full;document.getElementById('step-phone').classList.remove('active');document.getElementById('step-otp').classList.add('active');document.querySelectorAll('.otp-box')[0].focus();btn.disabled=false;btn.innerHTML='Send OTP via SMS';})
-    .catch(e=>{err.textContent=e.message;btn.disabled=false;btn.innerHTML='Send OTP via SMS';if(recapVerifier){recapVerifier.clear();recapVerifier=null;}});
+
+function _generateOTP(){ return String(Math.floor(100000+Math.random()*900000)); }
+
+async function sendEmailOTP(){
+  const emailEl = document.getElementById('email-input');
+  const errEl   = document.getElementById('email-err');
+  const btn     = document.getElementById('send-otp-btn');
+  const email   = emailEl.value.trim().toLowerCase();
+
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+    errEl.textContent = 'Please enter a valid email address'; return;
+  }
+  errEl.textContent = '';
+  btn.disabled = true;
+  btn.innerHTML = 'Sending<span class="spinner"></span>';
+
+  _otpCode   = _generateOTP();
+  _otpEmail  = email;
+  _otpExpiry = Date.now() + 10*60*1000; // 10 min
+
+  try{
+    await emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_ID, {
+      to_email: email,
+      email: email, // Fallback if template uses {{email}}
+      to: email,    // Fallback if template uses {{to}}
+      user_email: email, // Fallback if template uses {{user_email}}
+      reply_to: email,
+      to_name:  email.split('@')[0],
+      otp_code: _otpCode
+    });
+  } catch(e){
+    const reason = (e && e.text) ? e.text : (e && e.message) ? e.message : JSON.stringify(e);
+    console.error('EmailJS Error:', e);
+    
+    // Instead of blocking them entirely, fallback to Dev Mode
+    errEl.innerHTML = `⚠️ Email failed (<span style="color:var(--text2)">${reason}</span>)<br>
+      <span style="font-size:11px;color:var(--accent)">Dev Mode Active: Your OTP is <b>${_otpCode}</b> (Check console)</span>`;
+    console.log('%c[DEV MODE] OTP Generated: ' + _otpCode, 'color:#c8f135; font-size:16px; font-weight:bold;');
+    // Intentionally allowing the flow to continue to step 2!
+  }
+
+  document.getElementById('otp-email-display').textContent = email;
+  document.getElementById('step-email').classList.remove('active');
+  document.getElementById('step-otp').classList.add('active');
+  document.querySelectorAll('.otp-box')[0].focus();
+  btn.disabled = false;
+  btn.innerHTML = '📧 Send OTP to Email';
+
+  // Resend cooldown
+  let secs = 30;
+  const rl = document.getElementById('resend-link');
+  rl.style.pointerEvents='none'; rl.style.color='var(--muted)';
+  const t = setInterval(()=>{
+    secs--; rl.textContent='Resend OTP ('+secs+'s)';
+    if(secs<=0){ clearInterval(t); rl.textContent='Resend OTP'; rl.style.pointerEvents=''; rl.style.color='var(--accent)'; }
+  },1000);
 }
-function otpInput(el,idx){el.value=el.value.replace(/\D/g,'');if(el.value&&idx<5)document.querySelectorAll('.otp-box')[idx+1].focus();}
-function otpKey(e,idx){if(e.key==='Backspace'&&!e.target.value&&idx>0)document.querySelectorAll('.otp-box')[idx-1].focus();}
-function verifyOTP(){
-  const code=[...document.querySelectorAll('.otp-box')].map(b=>b.value).join('');
-  const btn=document.getElementById('verify-btn');
-  const err=document.getElementById('otp-err');
-  if(code.length<6){err.textContent='Enter all 6 digits';return;}
-  err.textContent='';btn.disabled=true;btn.innerHTML='Verifying<span class="spinner"></span>';
-  confirmResult.confirm(code)
-    .then(()=>{btn.disabled=false;btn.innerHTML='✓ Verify & Enter';})
-    .catch(()=>{err.textContent='Wrong OTP — try again.';btn.disabled=false;btn.innerHTML='✓ Verify & Enter';});
+
+function resendOTP(){
+  goBackEmail();
+  setTimeout(sendEmailOTP, 200);
 }
-function goBackPhone(){
+
+function otpInput(el,idx){ el.value=el.value.replace(/\D/g,''); if(el.value&&idx<5)document.querySelectorAll('.otp-box')[idx+1].focus(); }
+function otpKey(e,idx){ if(e.key==='Backspace'&&!e.target.value&&idx>0)document.querySelectorAll('.otp-box')[idx-1].focus(); }
+
+function verifyEmailOTP(){
+  const code = [...document.querySelectorAll('.otp-box')].map(b=>b.value).join('');
+  const btn  = document.getElementById('verify-btn');
+  const err  = document.getElementById('otp-err');
+  if(code.length<6){ err.textContent='Enter all 6 digits'; return; }
+  if(Date.now() > _otpExpiry){ err.textContent='OTP expired. Please request a new one.'; return; }
+  if(code !== _otpCode){ err.textContent='Wrong OTP — try again.'; return; }
+
+  err.textContent='';
+  btn.disabled=true;
+  btn.innerHTML='Verifying<span class="spinner"></span>';
+
+  // OTP correct — log in
+  _loggedEmail = _otpEmail;
+  localStorage.setItem('ft_email', _otpEmail);
+  localStorage.setItem('ft_session', btoa(_otpEmail + ':' + Date.now()));
+  setTimeout(()=>{
+    btn.disabled=false; btn.innerHTML='✓ Verify & Enter';
+    _otpCode = null; // invalidate used OTP
+    checkAndShowProfile();
+  }, 500);
+}
+
+function goBackEmail(){
   document.getElementById('step-otp').classList.remove('active');
-  document.getElementById('step-phone').classList.add('active');
+  document.getElementById('step-email').classList.add('active');
   document.querySelectorAll('.otp-box').forEach(b=>b.value='');
   document.getElementById('otp-err').textContent='';
 }
-async function loadCloudData(){
-  if(!currentUID||!db)return;
-  try{
-    const snap=await db.collection('users').doc(currentUID).get();
-    if(snap.exists){const d=snap.data();if(d.state)try{state=JSON.parse(d.state);}catch(e){}if(d.weights)try{weightLog=JSON.parse(d.weights);}catch(e){}}
-  }catch(e){console.error('Cloud load failed',e);}
-  buildDateNav();renderAll();renderWeightLog();updateProgressRing();
+
+function logOutUser(){
+  if(confirm('Log out of this device?')){
+    localStorage.removeItem('ft_session');
+    localStorage.removeItem('ft_email');
+    _loggedEmail=null;
+    showLoginOverlay();
+    // Refresh to clear local state visually
+    setTimeout(()=>window.location.reload(), 100);
+  }
 }
-function saveToCloud(){
-  if(!currentUID||!db)return;
-  db.collection('users').doc(currentUID).set({state:JSON.stringify(state),weights:JSON.stringify(weightLog),updated:new Date().toISOString()}).catch(e=>console.error('Cloud save failed',e));
-}
-// ====== END FIREBASE ======
+
+// Auto-resume session (valid for 7 days)
+(function checkSession(){
+  const sess = localStorage.getItem('ft_session');
+  if(sess){
+    try{
+      const parts = atob(sess).split(':');
+      const email = parts[0];
+      const ts    = parseInt(parts[1]);
+      const WEEK  = 7*24*60*60*1000;
+      if(Date.now()-ts < WEEK && email){
+        _loggedEmail = email;
+        setTimeout(checkAndShowProfile, 50);
+        return;
+      }
+    }catch(e){}
+  }
+  showLoginOverlay();
+}());
+
+// No cloud sync — data stays in localStorage (fast & private)
+function saveToCloud(){} // no-op placeholder
+// ====== END EMAIL OTP AUTH ======
 
 const FOOD_DB=[
-  {name:'Oats',cal:389,p:17,c:66,f:10},
+  // GRAINS & CEREALS
   {name:'White rice (cooked)',cal:130,p:2.7,c:28,f:0.4},
   {name:'Brown rice (cooked)',cal:123,p:2.7,c:26,f:1.8},
+  {name:'Roti / Chapati (wheat)',cal:297,p:11,c:57,f:11},
+  {name:'Roti (bajra/jowar)',cal:320,p:10,c:70,f:8},
+  {name:'Paratha (plain)',cal:330,p:8,c:45,f:10},
+  {name:'Aloo Paratha',cal:275,p:6,c:38,f:8},
+  {name:'Oats (raw)',cal:389,p:17,c:66,f:10},
+  {name:'Poha (raw)',cal:346,p:6,c:77,f:1},
   {name:'Poha (cooked)',cal:110,p:2,c:23,f:0.5},
   {name:'Suji / Semolina',cal:360,p:13,c:73,f:3.9},
   {name:'Muesli',cal:370,p:10,c:65,f:7},
-  {name:'Sabudana',cal:350,p:0.2,c:87,f:0.5},
-  {name:'Puffed rice',cal:380,p:6,c:85,f:1},
+  {name:'Dalia (broken wheat)',cal:342,p:12,c:76,f:8},
+  {name:'Sabudana (raw)',cal:350,p:0.2,c:87,f:0.5},
+  {name:'Puffed rice (murmura)',cal:380,p:6,c:85,f:1},
+  {name:'Quinoa (cooked)',cal:120,p:4.4,c:21,f:2.8},
+  {name:'Bread white slice',cal:265,p:9,c:49,f:2.7},
+  {name:'Bread brown slice',cal:250,p:10,c:45,f:4},
+
+  // PROTEINS (MEAT & EGGS)
   {name:'Egg whole',cal:155,p:13,c:1.1,f:0},
   {name:'Egg white',cal:52,p:11,c:0.7,f:0},
+  {name:'Chicken breast (raw)',cal:120,p:22,c:0,f:0},
   {name:'Chicken breast grilled',cal:165,p:31,c:0,f:0},
-  {name:'Fish rohu',cal:100,p:17,c:0,f:0},
+  {name:'Chicken curry (Indian)',cal:160,p:15,c:5,f:8},
+  {name:'Fish rohu (raw)',cal:100,p:17,c:0,f:0},
   {name:'Fish catla',cal:104,p:18,c:0,f:0},
-  {name:'Mutton',cal:294,p:25,c:0,f:0},
-  {name:'Dal masoor cooked',cal:116,p:9,c:20,f:8},
-  {name:'Dal moong cooked',cal:105,p:7,c:19,f:7},
-  {name:'Dal chana cooked',cal:164,p:9,c:27,f:8},
-  {name:'Dal toor cooked',cal:118,p:7,c:21,f:7},
+  {name:'Salmon',cal:208,p:20,c:0,f:0},
+  {name:'Mutton (raw)',cal:294,p:25,c:0,f:0},
+  {name:'Mutton curry',cal:220,p:16,c:4,f:12},
+  {name:'Pork (lean)',cal:242,p:27,c:0,f:0},
+  {name:'Beef (lean)',cal:250,p:26,c:0,f:0},
+
+  // PROTEINS (PLANT & BEANS)
+  {name:'Dal masoor (cooked)',cal:116,p:9,c:20,f:8},
+  {name:'Dal moong (cooked)',cal:105,p:7,c:19,f:7},
+  {name:'Dal chana (cooked)',cal:164,p:9,c:27,f:8},
+  {name:'Dal toor / arhar (cooked)',cal:118,p:7,c:21,f:7},
+  {name:'Rajma (cooked)',cal:127,p:9,c:23,f:6.4},
+  {name:'Chole / Chickpeas (cooked)',cal:164,p:9,c:27,f:8},
+  {name:'Soya chunks (raw)',cal:345,p:52,c:33,f:13},
+  {name:'Tofu (firm)',cal:144,p:16,c:3,f:2},
+
+  // DAIRY & ALTERNATIVES
+  {name:'Milk full fat',cal:61,p:3.2,c:4.8,f:0},
+  {name:'Milk toned (low fat)',cal:42,p:3.4,c:5,f:0},
+  {name:'Paneer (full fat)',cal:265,p:18,c:3,f:0},
+  {name:'Paneer (low fat)',cal:150,p:19,c:4,f:0},
+  {name:'Curd / Yogurt',cal:61,p:3.5,c:4.7,f:0},
+  {name:'Cheese slice / cube',cal:402,p:25,c:1,f:0},
+  {name:'Butter',cal:717,p:0.8,c:0,f:0},
+  {name:'Ghee',cal:900,p:0,c:0,f:0},
+  {name:'Whey Protein (1 scoop/30g)',cal:120,p:24,c:3,f:0},
+
+  // FRUITS
   {name:'Banana',cal:89,p:1.1,c:23,f:2.6},
   {name:'Apple',cal:52,p:0.3,c:14,f:2.4},
   {name:'Orange',cal:47,p:0.9,c:12,f:2.4},
   {name:'Grapes',cal:67,p:0.6,c:17,f:0.9},
   {name:'Papaya',cal:43,p:0.5,c:11,f:1.7},
   {name:'Mango',cal:60,p:0.8,c:15,f:1.6},
-  {name:'Cucumber shosha',cal:15,p:0.7,c:3.6,f:0.5},
-  {name:'Carrot gajar',cal:41,p:0.9,c:10,f:2.8},
+  {name:'Watermelon',cal:30,p:0.6,c:8,f:0.4},
+  {name:'Guava',cal:68,p:2.6,c:14,f:5.4},
+  {name:'Pineapple',cal:50,p:0.5,c:13,f:1.4},
+  {name:'Pomegranate',cal:83,p:1.7,c:19,f:4},
+
+  // VEGETABLES
+  {name:'Cucumber / Shosha',cal:15,p:0.7,c:3.6,f:0.5},
+  {name:'Carrot / Gajar',cal:41,p:0.9,c:10,f:2.8},
   {name:'Beetroot',cal:43,p:1.6,c:10,f:2.8},
-  {name:'Spinach palak',cal:23,p:2.9,c:3.6,f:2.2},
+  {name:'Spinach / Palak',cal:23,p:2.9,c:3.6,f:2.2},
   {name:'Tomato',cal:18,p:0.9,c:3.9,f:1.2},
   {name:'Onion',cal:40,p:1.1,c:9,f:1.7},
-  {name:'Milk full fat',cal:61,p:3.2,c:4.8,f:0},
-  {name:'Paneer',cal:265,p:18,c:3,f:0},
-  {name:'Curd yogurt',cal:61,p:3.5,c:4.7,f:0},
-  {name:'Roti wheat chapati',cal:297,p:11,c:57,f:11},
-  {name:'Bread white slice',cal:265,p:9,c:49,f:2.7},
+  {name:'Potato (raw)',cal:77,p:2,c:17,f:2.2},
+  {name:'Potato (boiled)',cal:87,p:1.9,c:20,f:1.8},
+  {name:'Broccoli',cal:34,p:2.8,c:6.6,f:2.6},
+  {name:'Cauliflower / Gobi',cal:25,p:1.9,c:5,f:2},
+  {name:'Cabbage / Patta Gobi',cal:25,p:1.3,c:6,f:2.5},
+  {name:'Bhindi / Okra (cooked)',cal:33,p:1.9,c:7,f:3},
+  {name:'Brinjal / Eggplant',cal:25,p:1,c:6,f:3},
+  {name:'Lauki / Bottle Gourd',cal:14,p:0.6,c:3,f:0},
+
+  // NUTS, SEEDS & OILS
   {name:'Peanuts',cal:567,p:26,c:16,f:8.5},
   {name:'Almonds',cal:579,p:21,c:22,f:12.5},
-  {name:'Ghee',cal:900,p:0,c:0,f:0},
+  {name:'Walnuts',cal:654,p:15,c:14,f:7},
+  {name:'Cashews',cal:553,p:18,c:30,f:3},
+  {name:'Chia Seeds',cal:486,p:17,c:42,f:34},
+  {name:'Flax Seeds',cal:534,p:18,c:29,f:27},
+  {name:'Olive Oil',cal:884,p:0,c:0,f:0},
+  {name:'Mustard Oil',cal:884,p:0,c:0,f:0},
+
+  // INDIAN SNACKS & BREAKFAST
   {name:'Idli',cal:58,p:2,c:12,f:0.5},
-  {name:'Dosa',cal:168,p:4,c:25,f:1},
+  {name:'Dosa (plain)',cal:168,p:4,c:25,f:1},
+  {name:'Masala Dosa',cal:250,p:5,c:35,f:3},
   {name:'Upma',cal:160,p:4,c:27,f:2},
   {name:'Khichdi',cal:150,p:6,c:26,f:3},
+  {name:'Samosa (1 medium)',cal:260,p:3,c:24,f:2},
+  {name:'Vada Pav',cal:300,p:6,c:40,f:4},
+  {name:'Pani Puri (6 pieces)',cal:150,p:3,c:25,f:1},
+  {name:'Bhel Puri',cal:180,p:4,c:35,f:4},
+  {name:'Dhokla',cal:160,p:5,c:25,f:4},
+  {name:'Maggi Noodles (cooked)',cal:340,p:7,c:48,f:2},
+
+  // GLOBAL JUNK / FAST FOOD
+  {name:'Pizza slice (regular)',cal:285,p:12,c:36,f:3},
+  {name:'Burger (veg)',cal:250,p:8,c:35,f:4},
+  {name:'Burger (chicken)',cal:350,p:15,c:40,f:3},
+  {name:'French Fries',cal:312,p:3.4,c:41,f:3.8},
+  {name:'Pasta (cooked)',cal:131,p:5,c:25,f:1.8}, // macros per 100g
+  {name:'Pasta (with sauce/cheese)',cal:200,p:6,c:30,f:4},
+
+  // SWEETS & CHOCOLATE
+  {name:'Gulab Jamun (1 piece)',cal:175,p:2,c:25,f:1},
+  {name:'Rasgulla (1 piece)',cal:100,p:2,c:20,f:0},
+  {name:'Jalebi',cal:300,p:2,c:60,f:1},
+  {name:'Dairy Milk Chocolate',cal:534,p:7,c:59,f:2},
+  {name:'Ice Cream (vanilla)',cal:207,p:3.5,c:24,f:0},
+
+  // BEVERAGES
+  {name:'Tea (with milk & sugar)',cal:60,p:1,c:10,f:0},
+  {name:'Coffee (with milk & sugar)',cal:70,p:1.5,c:12,f:0},
+  {name:'Black Coffee / Green Tea',cal:2,p:0,c:0,f:0},
+  {name:'Coca Cola / Pepsi',cal:42,p:0,c:10.6,f:0},
+  {name:'Fruit Juice (sweetened)',cal:50,p:0.5,c:12,f:0.2},
+  {name:'Beer',cal:43,p:0.5,c:3.6,f:0},
 ];
 
 const MEALS=[
@@ -538,16 +880,29 @@ const MEALS=[
   {id:'dinner',time:'8:00 PM',name:'Dinner',icon:'🌙',iconBg:'#00101a',items:[{name:'Suji upma / Dal soup',amount:'1 cup'},{name:'Boiled egg',amount:'1'},{name:'Salad beet+carrot+shosha',amount:'generous'}],macros:{cal:225,p:14,c:8,f:10}},
 ];
 
+function _getUserPrefix() { return _loggedEmail ? _loggedEmail + '_' : 'guest_'; }
+
 let state = {};
-try { state = JSON.parse(localStorage.getItem('ft2_state') || '{}'); } catch(e) { console.error('Failed to load state', e); }
 let weightLog = [];
-try { weightLog = JSON.parse(localStorage.getItem('ft2_weights') || '[]'); } catch(e) { console.error('Failed to load weights', e); }
+
+function loadUserData() {
+  const pfx = _getUserPrefix();
+  try { 
+    let s = localStorage.getItem('ft2_state_' + pfx);
+    state = JSON.parse(s || '{}'); 
+  } catch(e) { state={}; }
+  try { 
+    let w = localStorage.getItem('ft2_weights_' + pfx);
+    weightLog = JSON.parse(w || '[]'); 
+  } catch(e) { weightLog=[]; }
+}
+loadUserData();
 let activeDate=todayKey();
 let selectedFood=null,isManual=false,lastMidnight='';
 
 function todayKey(){return new Date().toISOString().split('T')[0]}
 function getDS(k){if(!state[k])state[k]={meals:{},water:0,custom:[]};if(!state[k].custom)state[k].custom=[];return state[k]}
-function save(){try{localStorage.setItem('ft2_state',JSON.stringify(state))}catch(e){console.error('localStorage blocked or full')}saveToCloud();}
+function save(){try{localStorage.setItem('ft2_state_' + _getUserPrefix(),JSON.stringify(state))}catch(e){console.error('localStorage blocked or full')}saveToCloud();}
 
 // LIVE CLOCK - auto updates every second
 function tick(){
@@ -585,11 +940,20 @@ function buildDateNav(){
 
 function renderAll(){renderMeals();updateSummary();renderWater()}
 
+function getScaledMeals() {
+  let target = userProfile ? (userProfile.customCal || userProfile.suggestedCal) : 1500;
+  if (!target || target < 500) target = 1500;
+  const ratio = target / 1500;
+  return MEALS.map(m => {
+    return { ...m, macros: { cal: Math.round(m.macros.cal * ratio), p: Math.round(m.macros.p * ratio * 10) / 10, c: Math.round(m.macros.c * ratio * 10) / 10, f: Math.round(m.macros.f * ratio * 10) / 10 } };
+  });
+}
+
 function renderMeals(){
   const container=document.getElementById('meals-container');
   const ds=getDS(activeDate);
   container.innerHTML='';
-  MEALS.forEach(meal=>{
+  getScaledMeals().forEach(meal=>{
     const done=ds.meals[meal.id]||false;
     const card=document.createElement('div');card.className='meal-card';
     card.innerHTML=`
@@ -660,17 +1024,40 @@ function toggleCustomLog(){
 function updateSummary(){
   const ds=getDS(activeDate);
   let cal=0,p=0,c=0,f=0;
-  MEALS.forEach(m=>{if(ds.meals[m.id]){cal+=m.macros.cal;p+=m.macros.p;c+=m.macros.c;f+=m.macros.f}});
+  getScaledMeals().forEach(m=>{if(ds.meals[m.id]){cal+=m.macros.cal;p+=m.macros.p;c+=m.macros.c;f+=m.macros.f}});
   (ds.custom||[]).forEach(i=>{cal+=i.cal;p+=i.p;c+=i.c;f+=i.f});
+  let target = userProfile ? (userProfile.customCal || userProfile.suggestedCal) : 1500;
+
   document.getElementById('cal-consumed').textContent=cal;
+  document.getElementById('cal-target-display').textContent=`/ ${target} kcal`;
+
+  const sb = document.getElementById('cal-status-badge');
+  if(sb) {
+    if(!userProfile) {
+      sb.className='cal-status exact'; sb.textContent='Target: 1500 kcal';
+    } else {
+      let diff = target - cal;
+      if(diff > 0) { sb.className='cal-status under'; sb.textContent=`✅ Under by ${diff} kcal`; }
+      else if(diff < 0) { sb.className='cal-status over'; sb.textContent=`⚠️ Over by ${Math.abs(diff)} kcal`; }
+      else { sb.className='cal-status exact'; sb.textContent=`🎯 Exact Target!`; }
+    }
+  }
+
   document.getElementById('prot-val').textContent=Math.round(p)+'/75g';
   document.getElementById('carb-val').textContent=Math.round(c)+'/100g';
   document.getElementById('fib-val').textContent=Math.round(f)+'/50g';
   document.getElementById('prot-bar').style.width=Math.min(100,p/75*100)+'%';
   document.getElementById('carb-bar').style.width=Math.min(100,c/100*100)+'%';
   document.getElementById('fib-bar').style.width=Math.min(100,f/50*100)+'%';
+  
   const circ=207;
-  document.getElementById('cal-ring').style.strokeDashoffset=circ-(circ*Math.min(1,cal/1500));
+  // Colored ring logic
+  const ring = document.getElementById('cal-ring');
+  ring.style.strokeDashoffset = circ-(circ*Math.min(1,cal/target));
+  if(cal > target) ring.style.stroke = 'var(--red)';
+  else if (cal < target && cal > target - 400) ring.style.stroke = 'var(--accent2)';
+  else ring.style.stroke = 'var(--accent)';
+
   let streak=0;const today=new Date();
   for(let i=0;i<90;i++){const d=new Date(today);d.setDate(today.getDate()-i);const k=d.toISOString().split('T')[0];const s=state[k];if(s&&(Object.values(s.meals||{}).some(v=>v)||(s.custom||[]).length>0))streak++;else break}
   const sn=document.getElementById('streak-num');if(sn)sn.textContent=streak;
@@ -680,7 +1067,7 @@ function renderWater(){
   const ds=getDS(activeDate);const w=ds.water||0;
   const container=document.getElementById('water-cups');container.innerHTML='';
   for(let i=0;i<8;i++){const cup=document.createElement('div');cup.className='cup'+(i<w?' filled':'');cup.textContent='🥛';cup.onclick=()=>{ds.water=(i<w)?i:i+1;save();renderWater()};container.appendChild(cup)}
-  document.getElementById('water-label').textContent=`${w} / 8 glasses (${(w*0.3).toFixed(1)}L)`;
+  document.getElementById('water-label').textContent=`${w} / 8 glasses (${(w*0.5).toFixed(1)}L)`;
 }
 
 // MODAL
@@ -768,31 +1155,179 @@ function saveWeight(){
   const today=new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
   const idx=weightLog.findIndex(e=>e.date===today);if(idx>=0)weightLog.splice(idx,1);
   weightLog.push({date:today,kg:val});
-  try { localStorage.setItem('ft2_weights',JSON.stringify(weightLog)); } catch(e) { console.error('Failed to save weight'); } saveToCloud();
+  try { localStorage.setItem('ft2_weights_' + _getUserPrefix(),JSON.stringify(weightLog)); } catch(e) { console.error('Failed to save weight'); } saveToCloud();
   inp.value='';renderWeightLog();updateProgressRing();
 }
 function updateProgressRing(){
-  const start=76,goal=60;
+  const start = userProfile ? userProfile.weight : 76;
+  const goal = userProfile ? userProfile.target : 60;
   const latest=weightLog.length?weightLog[weightLog.length-1].kg:start;
-  const pct=Math.min(100,(Math.max(0,start-latest)/(start-goal))*100);
+  let pct = 0;
+  if(start !== goal) {
+      pct = Math.min(100,(1 - (latest - goal) / (start - goal)) * 100);
+      if(pct < 0) pct = 0;
+  }
   const circ=377;
   const ring=document.getElementById('prog-ring');if(ring)ring.style.strokeDashoffset=circ-(circ*pct/100);
   const pe=document.getElementById('prog-pct');if(pe)pe.textContent=Math.round(pct)+'%';
-  const de=document.getElementById('goal-diff');if(de)de.textContent='−'+(latest-goal).toFixed(1)+' kg to go';
+  let diff = latest - goal;
+  const de=document.getElementById('goal-diff');
+  if(de) {
+      if(diff > 0) de.textContent='−'+diff.toFixed(1)+' kg to go';
+      else de.textContent='Goal Reached! 🎉';
+  }
   const ce=document.getElementById('cur-weight-display');if(ce)ce.textContent=latest;
 }
 
 function switchTab(tab){
-  ['home','weight'].forEach(t=>{document.getElementById('tab-'+t).classList.remove('active');document.getElementById('nav-'+t).classList.remove('active')});
+  ['home','weight','profile'].forEach(t=>{document.getElementById('tab-'+t).classList.remove('active');document.getElementById('nav-'+t).classList.remove('active')});
   document.getElementById('tab-'+tab).classList.add('active');
   document.getElementById('nav-'+tab).classList.add('active');
   document.getElementById('fab-btn').style.display=tab==='home'?'flex':'none';
   if(tab==='weight'){renderWeightLog();updateProgressRing()}
 }
 
+// ==== PROFILE & BMI LOGIC ====
+let userProfile = null;
+
+function loadProfile() {
+  try {
+    const pfx = _getUserPrefix();
+    let p = localStorage.getItem('ft_profile_' + pfx);
+    if(p) userProfile = JSON.parse(p);
+    else userProfile = null;
+  } catch(e){}
+}
+
+function guestLogin() {
+  _loggedEmail = null;
+  checkAndShowProfile();
+}
+
+function checkAndShowProfile() {
+  loadUserData(); // Reload meals and weight explicitly for this user
+  loadProfile();  // Load their exact profile
+  if(!userProfile) {
+    document.getElementById('step-email').classList.remove('active');
+    document.getElementById('step-otp').classList.remove('active');
+    document.getElementById('step-profile').classList.add('active');
+    document.getElementById('login-overlay').classList.remove('hidden');
+  } else {
+    hideLoginOverlay();
+    initProfileUI();
+  }
+}
+
+let selectedGen = 'male';
+function selectGender(g) {
+  selectedGen = g;
+  document.getElementById('gen-male').classList.remove('selected');
+  document.getElementById('gen-female').classList.remove('selected');
+  document.getElementById('gen-'+g).classList.add('selected');
+}
+
+function saveProfile() {
+  const age = parseInt(document.getElementById('prof-age').value);
+  const height = parseFloat(document.getElementById('prof-height').value);
+  const weight = parseFloat(document.getElementById('prof-weight').value);
+  const target = parseFloat(document.getElementById('prof-target').value);
+  const activity = parseFloat(document.getElementById('prof-activity').value);
+  const err = document.getElementById('prof-err');
+  
+  if(!age||!height||!weight||!target) {
+    err.textContent = 'Please fill out all fields'; return;
+  }
+  err.textContent = '';
+  
+  // Calc TDEE (Mifflin-St Jeor)
+  let bmr = (10*weight) + (6.25*height) - (5*age);
+  bmr += (selectedGen === 'male' ? 5 : -161);
+  const tdee = Math.round(bmr * activity);
+  
+  // Calc Suggested Cal
+  let suggestedCal = tdee;
+  if(target < weight) suggestedCal -= 500; // Fat loss
+  if(target > weight) suggestedCal += 300; // Muscle gain
+  if(suggestedCal < 1200) suggestedCal = 1200; // Floor
+
+  userProfile = {
+    age, gender: selectedGen, height, weight, target, activity, tdee, suggestedCal, customCal: null
+  };
+  localStorage.setItem('ft_profile_' + _getUserPrefix(), JSON.stringify(userProfile));
+  
+  hideLoginOverlay();
+  initProfileUI();
+}
+
+function initProfileUI() {
+  loadProfile();
+  const bc = document.getElementById('bmi-card');
+  const dYes = document.getElementById('prof-has-data');
+  const dNo = document.getElementById('prof-no-data');
+
+  if(userProfile) {
+    bc.classList.add('show');
+    dYes.style.display = 'block'; dNo.style.display = 'none';
+
+    // BMI
+    const hM = userProfile.height / 100;
+    const bmi = (userProfile.weight / (hM*hM)).toFixed(1);
+    document.getElementById('bmi-num').textContent = bmi;
+    const bb = document.getElementById('bmi-badge');
+    const bi = document.getElementById('bmi-indicator');
+    
+    let left = 50;
+    if(bmi < 18.5) { bb.className="bmi-badge bmi-underweight"; bb.textContent="Underweight"; left = Math.max(0, (bmi/18.5)*25); }
+    else if(bmi < 25) { bb.className="bmi-badge bmi-normal"; bb.textContent="Normal"; left = 25 + ((bmi-18.5)/6.5)*25; }
+    else if(bmi < 30) { bb.className="bmi-badge bmi-overweight"; bb.textContent="Overweight"; left = 50 + ((bmi-25)/5)*25; }
+    else { bb.className="bmi-badge bmi-obese"; bb.textContent="Obese"; left = 75 + Math.min(25, ((bmi-30)/10)*25); }
+    bi.style.left = left + '%';
+
+    // Profile Tab
+    document.getElementById('prof-email-lbl').textContent = _loggedEmail || "Local Guest User";
+    document.getElementById('prof-tdee').textContent = userProfile.tdee;
+    document.getElementById('pt-age').textContent = userProfile.age;
+    document.getElementById('pt-height').textContent = userProfile.height;
+    document.getElementById('pt-weight').textContent = userProfile.weight;
+    document.getElementById('pt-target').textContent = userProfile.target;
+    
+    document.getElementById('prof-goal-cal').textContent = userProfile.customCal || userProfile.suggestedCal;
+    document.getElementById('custom-cal-inp').value = userProfile.customCal || '';
+    
+    let diff = userProfile.target - userProfile.weight;
+    let desc = "To maintain your weight, your daily suggested target is:";
+    if(diff < 0) desc = "For healthy fat loss, your daily suggested target is:";
+    if(diff > 0) desc = "For healthy muscle gain, your daily suggested target is:";
+    if(userProfile.customCal) desc = "You are using a custom manual target of:";
+    document.getElementById('prof-goal-desc').textContent = desc;
+  } else {
+    bc.classList.remove('show');
+    dYes.style.display = 'none'; dNo.style.display = 'block';
+  }
+  
+  renderAll();
+}
+
+function saveCustomCalTarget() {
+  if(!userProfile) return;
+  const val = parseInt(document.getElementById('custom-cal-inp').value);
+  if(val > 0) userProfile.customCal = val;
+  else userProfile.customCal = null; // Auto
+  localStorage.setItem('ft_profile_' + _getUserPrefix(), JSON.stringify(userProfile));
+  initProfileUI();
+}
+
+function resetProfile() {
+  if(!confirm("Reset your profile data?")) return;
+  localStorage.removeItem('ft_profile_' + _getUserPrefix());
+  userProfile = null;
+  initProfileUI();
+}
+
 // INIT
 lastMidnight=todayKey();
-buildDateNav();renderAll();
+buildDateNav();
+initProfileUI();
 </script>
 </body>
 </html>
